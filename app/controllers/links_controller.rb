@@ -14,4 +14,14 @@ class LinksController < ApplicationController
       format.js
     end
   end
+
+  def downvote
+    @link = Link.find params[:id]
+    @link.downvote
+    @link.save
+
+    respond_to do |format|
+      format.js
+    end
+  end
 end

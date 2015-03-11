@@ -56,5 +56,6 @@ Rails.application.routes.draw do
 
   resources :links
   post 'links/:id/upvote' => 'links#upvote', as: 'upvote'
+  post 'links/:id/downvote' => 'links#downvote', as: 'downvote'
   root 'links#index'
 end

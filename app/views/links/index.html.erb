@@ -3,7 +3,7 @@
     <li>
       <p>
         <%= link_to link.name, link.url %>
-        <%= link.votes %>
+        <span class="link-<%=link.id%>"><%= link.votes %></span>
         <%= button_to '↑', upvote_path(link), remote: true %>
       </p>
     </li>

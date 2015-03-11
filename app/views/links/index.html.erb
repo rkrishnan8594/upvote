@@ -1,12 +1,18 @@
-<ul>
-  <% @links.each do |link| %>
-    <li>
-      <p>
-        <%= link_to link.name, link.url %>
-        <span class="link-<%=link.id%>"><%= link.votes %></span>
-        <%= button_to '↑', upvote_path(link), remote: true %>
-        <%= button_to '↓', downvote_path(link), remote: true %>
-      </p>
-    </li>
-  <% end %>
-</ul>
+<%= render 'shared/navigation' %>
+
+<div class="feed-container">
+  <ul class="feed">
+    <% @links.each do |link| %>
+      <li class="feed-item">
+        <div class="votes-mod">
+          <%= button_to '↑', upvote_path(link), remote: true %>
+          <span class="link-<%=link.id%>"><%= link.votes %></span>
+          <%= button_to '↓', downvote_path(link), remote: true %>
+        </div>
+        <div class="link-content">
+          <p><%= link_to link.name, link.url %></p>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

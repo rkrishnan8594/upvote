@@ -1,3 +1,25 @@
 // Place all the styles related to the Links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.feed-container {
+	margin: 10% 30% 0% 30%;
+	width: 40%;
+}
+
+.feed {
+}
+
+.feed-item {
+	margin-bottom: 15px;
+}
+
+.votes-mod {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.link-content {
+	display: inline-block;
+	vertical-align: middle;
+}

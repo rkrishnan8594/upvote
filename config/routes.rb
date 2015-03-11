@@ -53,5 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :links
+  post 'links/:id/upvote' => 'links#upvote', as: 'upvote'
   root 'links#index'
 end

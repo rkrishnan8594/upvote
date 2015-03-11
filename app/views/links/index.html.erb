@@ -1,3 +1,11 @@
-<% @links.each do |link| %>
-  <%= link_to link.name, link.url %>
-<% end %>
+<ul>
+  <% @links.each do |link| %>
+    <li>
+      <p>
+        <%= link_to link.name, link.url %>
+        <%= link.votes %>
+        <%= button_to '↑', upvote_path(link), remote: true %>
+      </p>
+    </li>
+  <% end %>
+</ul>

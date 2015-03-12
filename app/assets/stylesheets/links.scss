@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .feed-container {
-	margin: 10% 30% 0% 30%;
+	margin: 6% 30% 0% 30%;
 	width: 40%;
 }
 
@@ -15,7 +15,10 @@
 }
 
 .votes-mod {
+	color: #ECF0F1;
 	display: inline-block;
+	font-family: 'Helvetica Neue';
+	font-size: 16px;
 	vertical-align: middle;
 }
 
@@ -23,3 +26,25 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+
+
+.btn-upvote {
+	background-image: image-url("arrow241.svg");
+	border: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	background-color: transparent;
+}
+
+.btn-downvote {
+	background-image: image-url("expand22.svg");
+	border: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	background-color: transparent;
+}
+

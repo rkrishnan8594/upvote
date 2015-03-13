@@ -2,7 +2,7 @@ class LinksController < ApplicationController
   respond_to :html, :json
 
   def index
-    @links = Link.all
+    @links = Link.all.order(votes: :desc)
   end
 
   def upvote

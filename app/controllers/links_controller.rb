@@ -5,6 +5,14 @@ class LinksController < ApplicationController
     @links = Link.all.order(votes: :desc)
   end
 
+  def new
+    @link = Link.new
+  end
+
+  def create
+    @link = Link.new(link_params)
+  end
+
   def upvote
     @link = Link.find params[:id]
     @link.upvote
@@ -24,4 +32,10 @@ class LinksController < ApplicationController
       format.js
     end
   end
+
+  private
+
+    def link_params
+      params.require(:name, :url)
+    end
 end

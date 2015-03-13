@@ -14,6 +14,8 @@
  *= require_self
  */
 
+/* #EDE7C9 */
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -21,7 +23,7 @@
 }
 
 body {
-	background-color: #34495E;
+	background-color: #CB626D;
 }
 
 h1 {
@@ -52,4 +54,8 @@ input:focus {
 .navigation-container {
 	margin-top: 4%;
 	text-align: center;
+}
+
+.logo:hover {
+	color: #F4D271;
 }

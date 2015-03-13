@@ -6,11 +6,11 @@
       <li class="feed-item">
         <div class="votes-mod">
           <%= button_to '', upvote_path(link), remote: true, class: 'btn-upvote' %>
-          <span class="link-<%=link.id%>"><%= link.votes %></span>
+          <div class="link-<%=link.id%>"><%= link.votes %></div>
           <%= button_to '', downvote_path(link), remote: true, class: 'btn-downvote' %>
         </div>
         <div class="link-content">
-          <p><%= link_to link.name, link.url %></p>
+          <p><%= link_to link.name, link.url, class: 'link-url' %></p>
         </div>
       </li>
     <% end %>

@@ -19,6 +19,13 @@
 
 <div class="form-container">
   <div class="btn-new">
-    <p>+ New</p>
+    <a class="btn-new-action" href="#"><p>+ New</p></a>
+  </div>
+  <div class="link-form-container">
+    <%= form_for @link do |f| %>
+      <%= f.text_field :name %><br />
+      <%= f.text_field :url %><br />
+      <%= f.submit %>
+    <% end %>
   </div>
 </div>

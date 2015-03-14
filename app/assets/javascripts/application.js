@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$('.btn-new-action').click(function() {
+  alert('hello')
+});

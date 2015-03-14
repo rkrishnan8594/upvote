@@ -3,6 +3,7 @@ class LinksController < ApplicationController
 
   def index
     @links = Link.all.order(votes: :desc)
+    @link = Link.new
   end
 
   def new
@@ -11,6 +12,10 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.new(link_params)
+    @link.votes = 0
+    if @link.save
+      redirect_to root_url
+    end
   end
 
   def upvote
@@ -36,6 +41,6 @@ class LinksController < ApplicationController
   private
 
     def link_params
-      params.require(:name, :url)
+      params.require(:link).permit(:name, :url)
     end
 end

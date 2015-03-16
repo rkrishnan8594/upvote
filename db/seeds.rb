@@ -10,3 +10,5 @@ Link.create(name: 'Google', url: 'http://www.google.com', votes: 0)
 Link.create(name: 'Upstatement', url: 'http://www.upstatement.com', votes: 0)
 Link.create(name: 'Grantland', url: 'http://www.grantland.com', votes: 0)
 Link.create(name: 'Random House', url: 'http://www.randomhousebooks.com', votes: 0)
+
+Category.create(name: 'Rails', link_id: 2, link_id: 3)
